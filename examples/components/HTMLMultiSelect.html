@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>HTMLMultiSelect example</title>
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+</head>
+
+<body>
+    <div id="selectDiv"></div>
+
+    <script>
+        let component = new vf.HTMLMultiSelect("selectDiv")
+            .input("data", [
+                "Option_1",
+                "Option_2", 
+                "Option_3",
+                "Option_4",
+                "Option_5"
+            ])
+            .log("selected");
+    </script>
+</body>
+
+</html>

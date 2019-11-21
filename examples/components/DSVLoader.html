@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>DSVLoader example</title>
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+</head>
+
+<body>
+    <script>
+        let component = new vf.DSVLoader()
+            .input("filename", "../sample_data/mtcars.csv")
+            .input("delim", ";")
+            .log("out");
+    </script>
+</body>
+
+</html>

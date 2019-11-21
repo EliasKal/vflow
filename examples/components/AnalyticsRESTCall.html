@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AnalyticsRESTCall example</title>
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+</head>
+
+<body>
+    <script>
+        let data = [
+            {"id": "1", "label": "A", "value": 25.3},
+            {"id": "2", "label": "A", "value": 12.5},
+            {"id": "3", "label": "B", "value": 11.5},
+            {"id": "4", "label": "A", "value": 28.7},
+            {"id": "5", "label": "C", "value": 35.1},
+            {"id": "6", "label": "C", "value": 12.8},
+            {"id": "7", "label": "D", "value": 7.2},
+            {"id": "8", "label": "B", "value": 5.9},
+            {"id": "9", "label": "A", "value": 18.9},
+            {"id": "10", "label": "C", "value": 22.0}
+        ];
+
+        // Create a component.
+        let component = new vf.AnalyticsRESTCall()
+            .input("url", "http://160.40.50.208:8081/group_summarize")
+            .input("options", {
+                groupAttr: "label",
+                valueAttr: "value",
+                summaryFunction: "mean"
+            })
+            .input("data", data)
+            .log("response");
+    </script>
+</body>
+
+</html>

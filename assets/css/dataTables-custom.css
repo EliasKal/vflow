@@ -1,0 +1,13 @@
+table.dataTable{
+    font-family: Arial;
+    font-size: 12px; 
+    white-space: nowrap;
+}
+table.dataTable thead th,
+table.dataTable thead td {
+    padding: 4px 17px 4px 4px;
+}
+table.dataTable tbody th,
+table.dataTable tbody td {
+    padding: 4px; 
+}

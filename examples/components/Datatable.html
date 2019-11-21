@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Datatable example</title>
+
+    <script src="../../lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="../../lib/jquery-dataTables/jquery.dataTables-1.10.19.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="../../lib/jquery-dataTables/jquery.dataTables-1.10.19.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/dataTables-custom.css"/>
+    <script src="../../lib/jquery-dataTables/dataTables.select-1.3.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../lib/jquery-dataTables/select-1.3.0.dataTables.min.css" />
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+
+    <style>
+        #tableDiv th, td{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tableDiv"></div>
+
+    <script>
+        let data = [
+            { "id": 1, "x": 20.33, "y": 70.96, "z": 1.2, "group": "A" },
+            { "id": 2, "x": 26.51, "y": 46.48, "z": 2.5, "group": "A" },
+            { "id": 3, "x": 22.54, "y": 68.96, "z": 4.6, "group": "C" },
+            { "id": 4, "x": 29.93, "y": 43.48, "z": 6.7, "group": "A" },
+            { "id": 5, "x": 13.05, "y": 76.32, "z": 7.9, "group": "B" },
+            { "id": 6, "x": 25.23, "y": 68.91, "z": 3.8, "group": "A" },
+            { "id": 7, "x": 23.15, "y": 60.84, "z": 2.7, "group": "B" },
+            { "id": 8, "x": 34.78, "y": 62.37, "z": 8.3, "group": "B" },
+            { "id": 9, "x": 35.41, "y": 58.89, "z": 1.2, "group": "B" },
+            { "id": 10, "x": 38.51, "y": 56.14, "z": 0.1, "group": "A" },
+            { "id": 11, "x": 97.18, "y": 79.07, "z": 2.4, "group": "A" },
+            { "id": 12, "x": 68.05, "y": 68.71, "z": 2.0, "group": "A" },
+            { "id": 13, "x": 76.95, "y": 84.01, "z": 3.0, "group": "A" },
+            { "id": 14, "x": 77.89, "y": 94.23, "z": 1.4, "group": "C" },
+            { "id": 15, "x": 95.12, "y": 81.54, "z": 2.5, "group": "A" },
+            { "id": 16, "x": 60.34, "y": 75.14, "z": 4.5, "group": "C" },
+            { "id": 17, "x": 97.88, "y": 92.36, "z": 7.7, "group": "C" },
+            { "id": 18, "x": 75.69, "y": 82.10, "z": 6.7, "group": "C" },
+            { "id": 19, "x": 90.30, "y": 75.00, "z": 8.2, "group": "B" },
+            { "id": 20, "x": 85.81, "y": 86.13, "z": 8.1, "group": "B" }
+        ];
+
+        let table = new vf.Datatable("tableDiv", "500px", false, true)
+            .input("data", data);
+    </script>
+</body>
+
+</html>

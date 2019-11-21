@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>D3 Force-directed graph example</title>
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <style>
+        body {
+            font-family: Verdana;
+            font-size: 8pt;
+        }
+    </style>
+
+    <script>
+        let data = {
+            "nodes": 
+            [
+                {"id": 1, "type": "type_1", "value": 1}, 
+                {"id": 2, "type": "type_1", "value": 2}, 
+                {"id": 3, "type": "type_1", "value": 1}, 
+                {"id": 4, "type": "type_1", "value": 1}, 
+                {"id": 5, "type": "type_1", "value": 1}, 
+                {"id": 6, "type": "type_1", "value": 2}, 
+                {"id": 7, "type": "type_2", "value": 3}, 
+                {"id": 8, "type": "type_2", "value": 1}, 
+                {"id": 9, "type": "type_2", "value": 1}, 
+                {"id": 10, "type": "type_2", "value": 1}
+            ],
+            "edges": 
+            [
+                {"source": 1, "target": 3, "value": 2}, 
+                {"source": 2, "target": 3, "value": 1}, 
+                {"source": 3, "target": 4, "value": 1}, 
+                {"source": 3, "target": 5, "value": 1}, 
+                {"source": 3, "target": 6, "value": 1}, 
+                {"source": 4, "target": 5, "value": 2}, 
+                {"source": 5, "target": 6, "value": 1}, 
+                {"source": 6, "target": 7, "value": 3}, 
+                {"source": 7, "target": 8, "value": 1}, 
+                {"source": 7, "target": 10, "value": 1}, 
+                {"source": 8, "target": 9, "value": 1}, 
+                {"source": 9, "target": 10, "value": 1}
+            ]
+        };
+
+        let plot = new vf.D3ForceDirectedGraph("container")
+            .input("nodeId", d => d.id)
+            .input("data", data) // insert data after nodeId 
+            .input("width", 500)
+            .input("height", 500)
+            .input("sizeAttr", d => d.value)
+            .input("colorAttr", d => d.type)
+            .input("colorRange", ["lightsteelblue", "steelblue"])
+            .input("textAttr", d => d.id)
+            .input("thicknessAttr", d => d.value);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>D3 Radar chart example</title>
+
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <style>
+        .label {
+            font-family: Verdana;
+            font-size: 8pt;
+        }
+        .markLabel {
+            font-family: Verdana;
+            font-size: 8pt;
+        }
+    </style>
+
+    <script>
+        let data = [
+            {"id": 1, "disease_1": 4, "disease_2": 2, "disease_3": 1, "disease_4": 3, "disease_5": 0},
+            {"id": 2, "disease_1": 2, "disease_2": 3, "disease_3": 4, "disease_4": 3, "disease_5": 1}
+        ];
+
+        let plot = new vf.D3RadarChart("container")
+            .input("data", data)
+            .input("width", 600)
+            .input("height", 400)
+            .input("axes", [
+                "disease_1",
+                "disease_2",
+                "disease_3",
+                "disease_4",
+                "disease_5"
+            ])
+            .input("idFun", (d, i) => "patient" + d.id);
+    </script>
+</body>
+
+</html>
