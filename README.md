@@ -19,3 +19,9 @@ To use the vFlow library, download `build/vflow.js` and include the following in
 ```html
 <script src="vflow.js"></script>
 ```
+
+## Development team
+
+vFlow has been developed by the [Information Technologies Institute](https://www.iti.gr/iti/en/index.html) of the [Centre for Research and Technology Hellas](https://www.certh.gr/root.en.aspx).
+
+![ITI_logo](iti_logo.png)
