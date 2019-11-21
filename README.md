@@ -33,7 +33,7 @@ Researcher Grade C' & Director of Visual Analytics Lab
 kvotis@iti.gr
 
 [Ilias Kalamaras](https://www.iti.gr/iti/en/people/Ilias_Kalamaras.html)  
-Postdoctoral researcher  
+Postdoctoral research associate  
 kalamar@iti.gr
 
 [Konstantinos Glykos](https://www.iti.gr/iti/en/people/Konstantinos_Glykos.html)  
