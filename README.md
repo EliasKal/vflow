@@ -28,14 +28,14 @@ vFlow has been developed by the [Visual Analytics Lab](https://varlab.iti.gr/) o
 
 ### Team members
 
-[Konstantinos Votis](https://www.iti.gr/iti/en/people/Konstantinos_Votis.html)
-Researcher Grade C' & Director of Visual Analytics Lab
+[Konstantinos Votis](https://www.iti.gr/iti/en/people/Konstantinos_Votis.html)  
+Researcher Grade C' & Director of Visual Analytics Lab  
 kvotis@iti.gr
 
-[Ilias Kalamaras](https://www.iti.gr/iti/en/people/Ilias_Kalamaras.html)
-Postdoctoral researcher
+[Ilias Kalamaras](https://www.iti.gr/iti/en/people/Ilias_Kalamaras.html)  
+Postdoctoral researcher  
 kalamar@iti.gr
 
-[Konstantinos Glykos](https://www.iti.gr/iti/en/people/Konstantinos_Glykos.html)
-Research associate
+[Konstantinos Glykos](https://www.iti.gr/iti/en/people/Konstantinos_Glykos.html)  
+Research associate  
 glykos@iti.gr
