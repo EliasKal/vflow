@@ -22,6 +22,20 @@ To use the vFlow library, download `build/vflow.js` and include the following in
 
 ## Development team
 
-vFlow has been developed by the [Information Technologies Institute](https://www.iti.gr/iti/en/index.html) of the [Centre for Research and Technology Hellas](https://www.certh.gr/root.en.aspx).
+vFlow has been developed by the [Visual Analytics Lab](https://varlab.iti.gr/) of the [Information Technologies Institute](https://www.iti.gr/iti/en/index.html) of the [Centre for Research and Technology Hellas](https://www.certh.gr/root.en.aspx).
 
 ![ITI_logo](iti_logo.png)
+
+### Team members
+
+[Konstantinos Votis](https://www.iti.gr/iti/en/people/Konstantinos_Votis.html)
+Researcher Grade C' & Director of Visual Analytics Lab
+kvotis@iti.gr
+
+[Ilias Kalamaras](https://www.iti.gr/iti/en/people/Ilias_Kalamaras.html)
+Postdoctoral researcher
+kalamar@iti.gr
+
+[Konstantinos Glykos](https://www.iti.gr/iti/en/people/Konstantinos_Glykos.html)
+Research associate
+glykos@iti.gr
