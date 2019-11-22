@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial example</title>
+    <script src="../../lib/rxjs/rxjs.umd.min.js"></script>
+    <script src="../../lib/d3/d3.v5.min.js"></script>
+    <script src="../../build/vflow.js"></script>
+
+    <style>
+        body{ 
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="plotDiv"></div>
+    <div>
+        X-axis: <div id="selectDiv1"></div>
+    </div>
+    <br>
+    <div>
+        Y-axis: <div id="selectDiv2"></div>
+    </div>
+    
+
+    <script>
+        let dataLoader = new vf.DSVLoader()
+            .input("filename", "sample_data/mtcars.csv")
+            .input("delim", ";")
+            .log("out");
+
+        let attributes = new vf.Transformation(
+                function (d) { 
+                    if (d) {
+                        return Object.keys(d[0]); 
+                    }  
+                } 
+            )
+            .input("input", dataLoader.outputs["out"])
+            .log("out");    
+
+        let selectX = new vf.HTMLSelect("selectDiv1")
+            .input("data", attributes.outputs["out"])
+            .log("selected");
+
+        let selectY = new vf.HTMLSelect("selectDiv2")
+            .input("data", attributes.outputs["out"])
+            .log("selected");
+        
+        let plot = new vf.D3Scatterplot("plotDiv")
+            .input("data", dataLoader.outputs["out"], function (d) {if (d) {return d;} } )
+            .input("xAttr", selectX.outputs["selected"], function (d) {if (d) {return d;} } )
+            .input("yAttr", selectY.outputs["selected"], function (d) {if (d) {return d;} } );
+    </script>
+</body>
+
+</html>
