@@ -20,6 +20,8 @@ To use the vFlow library, download `build/vflow.js` and include the following in
 <script src="vflow.js"></script>
 ```
 
+You can find a tutorial for using the library [here](docs/tutorial/tutorial.md).
+
 ## Development team
 
 vFlow has been developed by the [Visual Analytics Lab](https://varlab.iti.gr/) of the [Information Technologies Institute](https://www.iti.gr/iti/en/index.html) of the [Centre for Research and Technology Hellas](https://www.certh.gr/root.en.aspx).
